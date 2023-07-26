@@ -12,26 +12,25 @@
 	<link
 		href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
 		rel="stylesheet">
-		<style>
-			body {
-				font-family: 'Inter', sans-serif;
-			}
-			/* Styles essentiels en ligne */
-			.top-header {
-				background-color: white;
-	position: sticky;
-	top: 0;
-	z-index: 1000;
-	display: flex;
-	justify-content: space-between;
-	padding-inline: 100px;
-	padding-block: 30px;
-	align-items: center;
-			}
-	
-			/* Ajoutez ici d'autres styles essentiels pour la mise en page de la page */
-	
-		</style>
+	<style>
+		body {
+			font-family: 'Inter', sans-serif;
+		}
+		/* Styles essentiels en ligne */
+		.top-header {
+			background-color: white;
+			position: sticky;
+			top: 0;
+			z-index: 1000;
+			display: flex;
+			justify-content: space-between;
+			padding-inline: 100px;
+			padding-block: 30px;
+			align-items: center;
+		}
+
+		
+	</style>
 
 	<!-- google -->
 	<meta name="description" content="La photographe évenementiel Nina Carducci propose des services de photographie professionnelles, de marriage, de concert,
@@ -49,10 +48,12 @@
 	<meta name="twitter:url" content="https://nina-carducci.github.io/" />
 	<meta name="twitter:site" content="@Nina Carducci" />
 	<meta name="twitter:creator" content="@Nina Carducci" />
-	<meta name="twitter:title"
-		content="Nina Carducci - photographe professionnelle" />
+	<meta name="twitter:title" content="Nina Carducci - photographe professionnelle" />
 	<meta name="twitter:description" content="Nina Carducci - photographe professionnelle évenementiel" />
 	<meta name="twitter:image" content="" />
+	<style id="deferred-styles">
+		/* Ajoutez ici les styles CSS non essentiels à charger ultérieurement */
+	</style>
 
 </head>
 
@@ -254,7 +255,7 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="./assets/maugallery.min.js"></script>
-	<script src="./assets/scripts.min.js"></script>
+	<script src="./assets/scripts.min.js defer"></script>
 
 	<!-- Rich Snippets généré par l'outil d'aide au balisage de données structurées de Google -->
 	<script type="application/ld+json">
@@ -284,20 +285,7 @@
 	  "url": "https://nina-carducci.github.io/"
 	}
 	</script>
-	<script>
-		// Chargement asynchrone des fichiers CSS non essentiels
-		function loadDeferredStyles() {
-			var addStylesNode = document.getElementById("deferred-styles");
-			var replacement = document.createElement("div");
-			replacement.innerHTML = addStylesNode.textContent;
-			document.body.appendChild(replacement);
-			addStylesNode.parentElement.removeChild(addStylesNode);
-		}
-		var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-			webkitRequestAnimationFrame || msRequestAnimationFrame;
-		if (raf) raf(function () { window.setTimeout(loadDeferredStyles, 0); });
-		else window.addEventListener('load', loadDeferredStyles);
-	</script>
+	
 </body>
 
 </html>
